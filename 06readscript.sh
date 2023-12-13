@@ -1,7 +1,7 @@
 
 
 #!bin/bash
-<<com
+
 echo "Enter username"
 
 read username
@@ -13,7 +13,7 @@ echo "Enter password"
 read password
 
 echo "entered password is: $password"
-com
+
 
 
 
