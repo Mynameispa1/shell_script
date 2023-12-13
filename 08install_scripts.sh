@@ -9,7 +9,7 @@ echo "Running with root user"
 fi
 
 yum install mysqlll -y
-if [ $(echo$?) -ne 0 ]
+if [ $? -ne 0 ]
 then
  echo "Error:: Installation is failed"
 else
