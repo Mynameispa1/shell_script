@@ -1,7 +1,7 @@
 #!bin/bash
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOG_FILE="/tmp/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 FUNCTION(){
 
@@ -21,8 +21,7 @@ else
 echo "Running with root user"
 fi
 
-yum install mysql -y @>> $LOG_FILE
-
+yum install mysql -y @>> $LOGFILE
 FUNCTION $? "Installing mysql"
-yum install git -y @>> $LOG_FILE
+yum install git -y @>> $LOGFILE
 FUNCTION $? "Installing git"
