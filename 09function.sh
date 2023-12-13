@@ -22,5 +22,5 @@ fi
 yum install mysql -y
 
 FUNCTION $? "Installing mysql"
-yum install gitt -y
+yum install git -y
 FUNCTION $? "Installing git"
