@@ -19,8 +19,8 @@ else
 echo "Running with root user"
 fi
 
-yum install mysql11 -y
+yum install mysql -y
 
 FUNCTION $? "Installing mysql"
-yum install git -y
+yum install gitt -y
 FUNCTION $? "Installing git"
