@@ -1,7 +1,7 @@
 #!bin/bash
 ID=$(id -u)
 
-function(){
+FUNCTION(){
 
       if [ $1 -ne 0 ]
       then
@@ -21,6 +21,6 @@ fi
 
 yum install mysql -y
 
-function $? "Installing mysql"
+FUNCTION $? "Installing mysql"
 yum install git -y
-function $? "Installing git"
+FUNCTION $? "Installing git"
