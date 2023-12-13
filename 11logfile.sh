@@ -21,8 +21,8 @@ else
 echo "Running with root user"
 fi
 
-yum install mysql -y &>> $LOGPATH
+yum install mysql -y 
 
 FUNCTION $? "Installing mysql"
-yum install git -y &>> $LOGPATH
+yum install git -y 
 FUNCTION $? "Installing git"
