@@ -14,5 +14,4 @@ then
  echo "Error:: Installation is failed"
 else
  echo "Installation is successful"
-
-
+fi
