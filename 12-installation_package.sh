@@ -30,10 +30,11 @@ for PACKAGE in $@
 do
    yum list installed $PACKAGE &>> $Log_Path
 
-if [ $? -ne 0 ]
-then
-   yum install $PACKAGE -y &>> $Log_Path
-   VALIDATE $? "Installation of $PACKAGE"
-else
-   echo "$2 is alreay installed.... $Y SKIPPING $N"
+    if [ $? -ne 0 ]
+    then
+      yum install $PACKAGE -y &>> $Log_Path
+      VALIDATE $? "Installation of $PACKAGE"
+     else
+      echo "$2 is alreay installed.... $Y SKIPPING $N"
+   fi
 done
