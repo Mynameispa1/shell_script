@@ -22,7 +22,7 @@ then
    exit 1
 
 else
-   echo -e "$G Running with root user"
+   echo -e "$G Running with root user$N"
 fi
 
 yum install mysql -y &>> $Log_Path
