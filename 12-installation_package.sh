@@ -13,8 +13,9 @@ then
   exit 1
 else
   echo "$2 is SUCCESS"
+fi  
 }
-fi
+
 
 if [ $ID -ne 0 ]
 then
