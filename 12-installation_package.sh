@@ -9,11 +9,12 @@ Log_Path="/tmp/$0-$TIMESTAMP"
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-  echo "$2 is FAILLED"
+  echo "$2 is FAILED"
   exit 1
 else
   echo "$2 is SUCCESS"
 }
+fi
 
 if [ $ID -ne 0 ]
 then
