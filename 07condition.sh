@@ -1,24 +1,28 @@
 #!bin/bash
 ID=$(id -u)
+R=\e[31m
+G=\e[32m
+Y=\e[33m
+N=\e[34m
 TIMESTAMP=$(date +%F-%H-%M-%S)
 Log_Path="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "Error:: $2.... failed"
+        echo -e "$R Error:: $2.... failed $N"
         exit 1
     else
-        echo "$2..... Success"  
+        echo -e "$2..... $GSuccess $N"  
 fi
 }
 
 if [ $ID -ne 0 ]
 then
-   echo "Error:: Please run with root user"
+   echo -e "$R Error:: Please run with root user $N"
    exit 1
 
 else
-   echo "Running with root user"
+   echo -e "$G Running with root user"
 fi
 
 yum install mysql -y &>> $Log_Path
