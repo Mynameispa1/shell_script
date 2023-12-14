@@ -9,16 +9,16 @@ Log_Path="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$R Error:: $2.... failed $N"
+        echo -e "Error:: $2.... $R failed $N"
         exit 1
     else
-        echo -e "$2..... $GSuccess $N"  
+        echo -e "$2..... $G Success $N"  
 fi
 }
 
 if [ $ID -ne 0 ]
 then
-   echo -e "$R Error:: Please run with root user $N"
+   echo -e "Error:: $R Please run with root user $N"
    exit 1
 
 else
