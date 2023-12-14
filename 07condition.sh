@@ -1,20 +1,20 @@
 #!bin/bash
+ID=$(id -u)
 
-<<com
-if [ today!=sunday ] 
+if [ $ID -ne 0 ]
 then
-    echo "Go to school"
-else 
-    echo "Happy Sunday"
-fi
-com
-
-NUMBER=$1
-
-if [ $NUMBER -gt 100 ]
-then
-    echo "The given number $NUMBER is greater then 100"
+   echo "Error:: Please run with root user"
+   exit 1
 
 else
-    echo "The given number $NUMBER is less then 100"
+   echo "Running with root user"
 fi
+
+yum install myql -y
+
+if[ $? -ne 0]
+then
+  echo "Error:: Installation of mysql failed"
+else
+echo "Installation of mysql success"  
+
