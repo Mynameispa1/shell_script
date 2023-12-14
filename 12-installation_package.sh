@@ -9,10 +9,10 @@ Log_Path="/tmp/$0-$TIMESTAMP"
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-  echo "$2 is FAILED"
+  echo -e "$R $2 is FAILED $N"
   exit 1
 else
-  echo "$2 is SUCCESS"
+  echo -e "$G $2 is SUCCESS $N"
 fi  
 }
 
@@ -22,7 +22,7 @@ then
   echo -e "Error:: $R Please run script with root user $N"
   exit 1
 else
-  echo "$G You are running with root user $N"
+  echo -e "$G You are running with root user $N"
 
 fi
 
@@ -35,6 +35,6 @@ do
       yum install $PACKAGE -y &>> $Log_Path
       VALIDATE $? "Installation of $PACKAGE"
      else
-      echo "$2 is alreay installed.... $Y SKIPPING $N"
+      echo -e "$2 is alreay installed.... $Y SKIPPING $N"
    fi
 done
