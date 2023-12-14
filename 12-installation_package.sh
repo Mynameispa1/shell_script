@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[34m"
-TIEMSTAMP=$(date +%F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 Log_Path="/tmp/$0-$TIMESTAMP"
 VALIDATE (){
 if [ $1 -ne 0 ]
@@ -35,6 +35,6 @@ do
       yum install $PACKAGE -y &>> $Log_Path
       VALIDATE $? "Installation of $PACKAGE"
      else
-      echo -e "$2 is alreay installed.... $Y SKIPPING $N"
+      echo -e "$PACKAGE is alreay installed.... $Y SKIPPING $N"
    fi
 done
