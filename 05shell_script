@@ -1,13 +1,13 @@
 #!bin/bash
 
-echo "Enter username"
+#Addition of two numbers by providing input from command line argument
 
-read username
+N1=$1
+N2=$2
+#read -p "Enter first num:" N1 #//This is to read input from the user
+#read -p "Enter Second num:" N2
 
-echo "given username is: $username"
+variable=$(expr $N1 + $N2)
+#sum=$(expr $N1 + $N2)
 
-echo "Enter password"
-
-read password
-
-echo "entered password is: $password"
+echo "The Sum of two numbers is: $variable"
