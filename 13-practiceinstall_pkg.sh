@@ -29,7 +29,7 @@ for package in $@
     yum list installed $package 
     if [ $? -ne 0 ]
     yum install $package -y &>> $Log_Path
-    VALIDATE $? "Installation of $package" &>> $Log_Path
+    VALIDATE $? "Installation of $package" 
     else
     echo "$package is already installed..... SKIPPING"  
    fi
