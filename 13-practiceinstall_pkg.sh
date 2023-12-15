@@ -25,11 +25,12 @@ echo "Running with root user"
 fi
 
 for package in $@
-    do
+do
     yum list installed $package 
     if [ $? -ne 0 ]
+    then
     yum install $package -y &>> $Log_Path
-    VALIDATE $? "Installation of $package" 
+    VALIDATE $? "Installation of $package"
     else
     echo "$package is already installed..... SKIPPING"  
    fi
