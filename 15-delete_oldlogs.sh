@@ -21,7 +21,7 @@ if [ $? -ne 0 ]
  then
    echo -e "Error:: $R.. Old logd are not deleted.. $N"
  else
-   echo -e "$R Required old logs are deleted.. $N"
+   echo -e "$G Required old logs are deleted.. $N"
 fi
 
 
