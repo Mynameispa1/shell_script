@@ -13,7 +13,7 @@ if [ ! -d $source_dir ]
     echo -e "$G Directory exist $N"
 fi
 
-files_to_delete=$(find /tmp/shellscript/ -type f -mtime +14 -name "*.log")
+files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log")
 
 rm -rf $files_to_delete
 
@@ -21,7 +21,7 @@ if [ $? -ne 0 ]
  then
    echo -e "Error:: $R.. Old logd are not deleted.. $N"
  else
-   echo -e "$G Required old logs are deleted.. $N"
+   echo -e "$G Deleted $file_to_delete.. $N"
 fi
 
 
