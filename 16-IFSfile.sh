@@ -5,9 +5,9 @@ if [ ! -f $file ]
    echo "Error:: The given directory not exist"
 fi
 
-while IFS ="----" read -r username password user_id group_id user_fullname
+while IFS =":" read -r username password user_id group_id user_fullname
 do 
-    echo "$username"
-    echo "$password"
-    echo "$user_id"
+    echo "username:$username"
+    echo "passwrod:$password"
+    echo "user_id:$user_id"
 done <<<$file
