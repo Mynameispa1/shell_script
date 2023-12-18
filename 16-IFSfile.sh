@@ -7,7 +7,7 @@ fi
 
 while IFS="     " read -r username password user_id group_id user_fullname
 do 
-    echo "username:$username"
-    echo "passwrod:$password"
-    echo "user_id:$user_id"
-done <<<$file
+    echo "username: $username"
+    echo "passwrod: $password"
+    echo "user_id: $user_id"
+done < $file
