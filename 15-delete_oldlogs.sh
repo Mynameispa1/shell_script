@@ -8,7 +8,7 @@ N="\e[34m"
 
 if [ ! -d $source_dir ]
   then
-    echo "Error:: $R Given directory is not exist $N"
+    echo "Error:: $R.. Given directory is not exist.. $N"
   else
     echo "$G Directory exist $N"
 fi
@@ -19,9 +19,9 @@ rm -rf $files_to_delete
 
 if [ $? -ne 0 ]
  then
-   echo "Error:: $R Old logd are not deleted $N"
+   echo "Error:: $R.. Old logd are not deleted.. $N"
  else
-   echo "$R Required old logs are deleted $N"
+   echo "$R Required old logs are deleted.. $N"
 fi
 
 
