@@ -2,7 +2,7 @@
 
 source_dir="/tmp/shellscript"
 
-if [ ! d $source_dir ]
+if [ ! -d $source_dir ]
   then
     echo "Error:: Given directory is not exist"
   else
