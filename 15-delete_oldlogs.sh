@@ -17,7 +17,7 @@ if [ $? -ne 0 ]
  then
    echo "Error:: Old logd are not deleted"
  else
-   echo "Re3quired old logs are deleted"
+   echo "Required old logs are deleted"
 fi
-   
+
 
