@@ -13,7 +13,7 @@ if [ ! -d $source_dir ]
     echo -e "$G Directory exist $N"
 fi
 
-files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log")
+files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log" >>/tmp/pavan)
 
 rm -rf $files_to_delete
 
