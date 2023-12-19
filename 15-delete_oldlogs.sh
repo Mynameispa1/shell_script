@@ -14,7 +14,7 @@ if [ ! -d $source_dir ]
 fi
 
 files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log")
-cp -pr $files_to_delete >> cd /tmp/pavan
+cp -pr $files_to_delete >>/tmp/
 rm -rf $files_to_delete
 
 if [ $? -ne 0 ]
