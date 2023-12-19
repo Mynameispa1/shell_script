@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source_dir="/tmp/shellscript"
-backup_dir="/tmp"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -14,8 +13,7 @@ if [ ! -d $source_dir ]
     echo -e "$G Directory exist $N"
 fi
 
-files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log")
-mv $files_to_delete $backup_dir
+files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log" -exec cp {} /tmp/pavan/ \; )
 rm -rf $files_to_delete
 
 if [ $? -ne 0 ]
