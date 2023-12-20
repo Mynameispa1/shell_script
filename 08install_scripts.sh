@@ -17,6 +17,7 @@ else
  echo "Installation of mysql is successful"
 fi
 
+<<com
 yum install git -y
 if [ $? -ne 0 ]
 then
@@ -25,3 +26,4 @@ then
 else
  echo "Installation of git is successful"
 fi
+com
