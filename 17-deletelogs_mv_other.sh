@@ -15,6 +15,15 @@ fi
 
 files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log" -exec mv {} /tmp/pavan/ \; )
 
+if [ $? -ne 0 ]
+then
+echo -e "$R Error:: $files are not moved $N"
+else
+echo -e "$G Files are moved $N" 
+fi
+
+
+
 # rm -rf $files_to_delete
 
 # if [ $? -ne 0 ]
