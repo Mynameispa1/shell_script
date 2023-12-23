@@ -47,6 +47,7 @@ Y="\e[33m"
 N="\e[34m"
 
 if [ $ID -ne 0 ]
+then
 echo -e "Error:: $R Please run with root user $N"
 exit 1
 else
