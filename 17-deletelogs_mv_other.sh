@@ -15,11 +15,11 @@ fi
 
 files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log" -exec mv {} /tmp/pavan/ \; )
 
-rm -rf $files_to_delete
+# rm -rf $files_to_delete
 
-if [ $? -ne 0 ]
- then
-   echo -e "Error:: $R.. Old logd are not deleted.. $N"
- else
-   echo -e "$G Deleted $file_to_delete.. $N"
-fi
+# if [ $? -ne 0 ]
+#  then
+#    echo -e "Error:: $R.. Old logd are not deleted.. $N"
+#  else
+#    echo -e "$G Deleted $file_to_delete.. $N"
+# fi
