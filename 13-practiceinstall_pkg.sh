@@ -1,4 +1,5 @@
 #!bin/bash
+<<com
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 Log_Path="/tmp/$0-$TIMESTAMP"
@@ -35,6 +36,18 @@ do
     echo "$package is already installed..... SKIPPING"  
    fi
 done
+com
+
+#second time practice to install packages using shell script
+
+ID=$(id -u)
+if [ $ID -ne 0 ]
+echo -e "Error:: $R Please run with root user $N"
+exit 1
+else
+echo -e "$G Running with root user $N"
+fi
+echo "All arguments passed $@"
 
 
 
