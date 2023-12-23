@@ -52,9 +52,9 @@ LOG_PATH="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
       if [ $1 -ne 0 ]
       then
-      echo -e "$2  $R failed....$N"
+      echo -e "$R $2  failed....$N"
       else
-      echo -e "$2 $G success....$N"
+      echo -e "$G $2 success....$N"
       fi
 }
 
