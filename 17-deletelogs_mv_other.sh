@@ -13,11 +13,11 @@ if [ ! -d $source_dir ]
     echo -e "$G Directory exist $N"
 fi
 
-files_to_delete=$(find $source_dir -type f -mtime +14 -name "*.log" -exec mv {} /tmp/pavan/ \; )
+files_to_move=$(find $source_dir -type f -mtime +14 -name "*.log" -exec mv {} /tmp/pavan/ \; )
 
 if [ $? -ne 0 ]
 then
-echo -e "$R Error:: $files are not moved $N"
+echo -e "$R Error:: $files_to_move are not moved $N"
 else
 echo -e "$G Files are moved $N" 
 fi
