@@ -1,4 +1,5 @@
 #!bin/bash
+<<com
 TIMESTAMP=$(date +%F-%H-%M-%S)
 echo "Please enter the source directory to create"
 read Source_dir
@@ -28,3 +29,7 @@ echo "Backup successful. Archive saved as: $backup_filename"
 else
 echo "Error: Backup failed."
 fi
+com
+
+
+

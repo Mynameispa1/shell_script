@@ -34,7 +34,7 @@ do
     then
       yum install $PACKAGE -y &>> $Log_Path
       VALIDATE $? "Installation of $PACKAGE"
-     else
+    else
       echo -e "$PACKAGE is alreay installed.... $Y SKIPPING $N"
    fi
 done
